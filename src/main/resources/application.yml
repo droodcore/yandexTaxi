@@ -1,11 +1,22 @@
 spring:
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/y_taxi
+    username: postgres
+    password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
     database: postgresql
     hibernate:
       ddl-auto: create
     show-sql: true
+
+  coordinate:
+    start-longitude: 56.829995
+    start-latitude: 60.633434
+    finish-longitude: 56.835717
+    finish-latitude: 60.525079
+
+  yandex:
+    url: https://taxi-routeinfo.taxi.yandex.net/taxi_info
+    clid: ${YANDEX_CLID}
+    apiKey: ${YANDEX_APIKEY}
